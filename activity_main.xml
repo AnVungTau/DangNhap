@@ -38,6 +38,7 @@
     </EditText>
 
     <CheckBox
+        android:id="@+id/checkbox"
         android:layout_marginTop="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -54,13 +55,16 @@
 
     </Button>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <RelativeLayout
+        android:id="@+id/relativeView"
+        android:visibility="invisible"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         >
 
     <TextView
-        android:visibility="gone"
+
+        android:id="@+id/saveEmail"
 
         android:textSize="20dp"
         tools:text="Email:abc@gmail.com"
@@ -69,29 +73,30 @@
 
     </TextView>
 
-    <TextView
-        android:visibility="gone"
-        app:layout_constraintTop_toBottomOf="@+id/email"
-
-        android:textSize="20dp"
-        tools:text="Password: 12345678"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-    </TextView>
 
 
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="50dp"
-            app:layout_constraintEnd_toEndOf="parent"
+        <TextView
+            android:layout_alignParentBottom="true"
+            android:id="@+id/savePass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
 
+            tools:text="Password: 12345678">
 
-            android:src="@drawable/icon_delete"
+        </TextView>
 
-            >
+    </RelativeLayout>
+    <ImageView
 
-        </ImageView>
+        android:id="@+id/img"
+        android:layout_width="40dp"
+        android:layout_height="50dp"
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        android:src="@drawable/icon_delete"
+
+        >
+
+    </ImageView>
+
 </LinearLayout>
